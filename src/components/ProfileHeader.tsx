@@ -15,6 +15,11 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
   profile,
   theme,
 }) => {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const avatarSrc = profile.avatar.startsWith("http")
+    ? profile.avatar
+    : `${basePath}${profile.avatar}`;
+
   return (
     <div className="flex flex-col items-center text-center">
       {/* Avatar Container with glowing border */}
@@ -23,7 +28,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
         
         <div className="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden p-1 bg-zinc-950">
           <Image
-            src={profile.avatar}
+            src={avatarSrc}
             alt={profile.name}
             width={128}
             height={128}
