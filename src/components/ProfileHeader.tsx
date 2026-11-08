@@ -3,8 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ProfileConfig, ThemeConfig } from "@/types";
-import { Check, MapPin, Sparkles } from "lucide-react";
-import { VCardButton } from "./VCardButton";
+import { Check, MapPin } from "lucide-react";
 
 interface ProfileHeaderProps {
   profile: ProfileConfig;
@@ -41,7 +40,7 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
         {profile.verified && (
           <div
             className="absolute bottom-1 right-1 w-7 h-7 rounded-full bg-blue-500 text-white flex items-center justify-center border-2 border-zinc-950 shadow-md"
-            title="ভেরিফায়েড প্রোফাইল"
+            title="Verified Official Muse"
           >
             <Check className="w-4 h-4 stroke-[3]" />
           </div>
@@ -82,13 +81,6 @@ export const ProfileHeader: React.FC<ProfileHeaderProps> = ({
         <div className="flex items-center gap-1 text-xs text-zinc-400 mt-2">
           <MapPin className="w-3.5 h-3.5 text-rose-400" />
           <span>{profile.location}</span>
-        </div>
-      )}
-
-      {/* Save Contact (vCard) */}
-      {profile.vcard?.enabled && (
-        <div className="mt-4">
-          <VCardButton vcard={profile.vcard} theme={theme} />
         </div>
       )}
     </div>

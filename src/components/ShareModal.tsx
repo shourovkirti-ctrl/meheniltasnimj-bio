@@ -7,10 +7,8 @@ import {
   Copy,
   Check,
   X,
-  QrCode,
-  Download,
-  Send,
   MessageCircle,
+  Send,
 } from "lucide-react";
 import confetti from "canvas-confetti";
 import { ThemeConfig } from "@/types";
@@ -89,10 +87,10 @@ export const ShareModal: React.FC<ShareModalProps> = ({
         onClick={handleNativeShare}
         aria-label="Share profile"
         className={`p-2.5 rounded-full border transition-all duration-200 hover:scale-105 active:scale-95 flex items-center gap-2 ${theme.cardClass}`}
-        title="শেয়ার করুন"
+        title="Share Profile"
       >
         <Share2 className="w-4 h-4 text-current" />
-        <span className="text-xs font-medium hidden sm:inline">শেয়ার</span>
+        <span className="text-xs font-medium hidden sm:inline">Share</span>
       </button>
 
       {isOpen && (
@@ -111,9 +109,9 @@ export const ShareModal: React.FC<ShareModalProps> = ({
               <X className="w-5 h-5" />
             </button>
 
-            <h3 className="text-lg font-bold">প্রোফাইল শেয়ার করুন</h3>
+            <h3 className="text-lg font-bold">Share Profile</h3>
             <p className="text-xs text-zinc-400 mt-1">
-              {name} ({handle}) এর লিঙ্ক সহজে শেয়ার করুন
+              Share {name}'s official link with your audience
             </p>
 
             {/* QR Code Card */}
@@ -144,11 +142,11 @@ export const ShareModal: React.FC<ShareModalProps> = ({
               >
                 {copied ? (
                   <>
-                    <Check className="w-3.5 h-3.5" /> কপি হয়েছে
+                    <Check className="w-3.5 h-3.5" /> Copied!
                   </>
                 ) : (
                   <>
-                    <Copy className="w-3.5 h-3.5" /> কপি
+                    <Copy className="w-3.5 h-3.5" /> Copy
                   </>
                 )}
               </button>

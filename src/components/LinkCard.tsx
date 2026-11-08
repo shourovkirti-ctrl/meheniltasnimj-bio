@@ -91,7 +91,7 @@ export const LinkCard: React.FC<LinkCardProps> = ({
 
           {showClickCount && clicks > 0 && (
             <span className="text-[10px] text-zinc-500 mt-1 inline-block">
-              {clicks} {clicks === 1 ? "ক্লিক" : "ক্লিক"}
+              {clicks} {clicks === 1 ? "click" : "clicks"}
             </span>
           )}
         </div>

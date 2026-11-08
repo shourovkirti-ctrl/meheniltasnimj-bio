@@ -1,36 +1,34 @@
 import { ProfileConfig } from "@/types";
 
 /**
- * 🌟 মেহেনিল তাসনিম জয়া (@meheniltasnimj) এর অফিসিয়াল বায়ো-লিংক কনফিগারেশন
+ * 🌟 Mehenil Tasnim Joya (@meheniltasnimj) Official Bio Configuration
  */
 export const profileConfig: ProfileConfig = {
-  // নাম ও সোশ্যাল হ্যান্ডেল
+  // Name and Handle
   name: "Mehenil Tasnim Joya",
   handle: "@meheniltasnimj",
   
-  // প্রোফাইল ছবি (public/avatar.jpg থেকে সরাসরি নেওয়া হয়েছে)
+  // Profile Avatar
   avatar: "/avatar.jpg",
   
-  // প্রফেশনাল টাইটেল / বায়ো
+  // Title & Bio
   title: "Fashion & Lifestyle Muse ✨",
-  
-  // সংক্ষিপ্ত বায়ো
   bio: "Unfiltered aesthetics, modern fashion, and daily musings. Welcome to my official links space 🕊️🤍",
   
-  // লোকেশন
-  location: "Dhaka, Bangladesh",
+  // Location
+  location: "Melbourne, Australia",
   
-  // ভেরিফায়েড ব্যাজ (True থাকলে ব্লু টিক দেখাবে)
+  // Verified Badge
   verified: true,
   
-  // স্ট্যাটাস পিল
+  // Status Pill
   status: {
     emoji: "✨",
     text: "Open for PR & Brand Collaborations",
     color: "emerald",
   },
 
-  // সোশ্যাল মিডিয়া লিংকগুলো (উপরের সারিতে শো করবে)
+  // Social Links
   socials: [
     {
       platform: "instagram",
@@ -54,67 +52,67 @@ export const profileConfig: ProfileConfig = {
     },
   ],
 
-  // ক্যাটাগরি ফিল্টার ট্যাব
-  categories: ["সবগুলো", "সোশ্যাল মিডিয়া", "কলাবোরেশন", "এক্সক্লুসিভ"],
+  // Category Tabs
+  categories: ["All", "Socials", "Collaborations", "Exclusive"],
 
-  // মূল লিংক কার্ডগুলো
+  // Main Links
   links: [
     {
       id: "instagram-main",
       title: "📸 Instagram Official",
-      subtitle: "@meheniltasnimj07 • ডেইলি লাইফস্টাইল, রিলস ও ফ্যাশন লুকস",
+      subtitle: "@meheniltasnimj07 • Daily aesthetics, reels & fashion looks",
       url: "https://www.instagram.com/meheniltasnimj07/",
       icon: "Instagram",
       badge: "ACTIVE",
-      highlight: true, // বিশেষ অ্যানিমেটেড গ্লো ইফেক্ট
+      highlight: true,
       pinned: true,
-      category: "সোশ্যাল মিডিয়া",
+      category: "Socials",
     },
     {
       id: "x-twitter-main",
       title: "🐦 X (Twitter) Profile",
-      subtitle: "@meheniltasnimj • এক্সক্লুসিভ ফটো ড্রপস, থ্রেডস ও থটস",
+      subtitle: "@meheniltasnimj • Unfiltered thoughts, photo sets & threads",
       url: "https://x.com/meheniltasnimj",
       icon: "Twitter",
       badge: "VERIFIED",
       highlight: true,
       pinned: true,
-      category: "সোশ্যাল মিডিয়া",
+      category: "Socials",
     },
     {
       id: "facebook-page-main",
       title: "📘 Facebook Page",
-      subtitle: "অফিসিয়াল ফেসবুক পেজে যুক্ত থাকুন ও ফলো করুন",
+      subtitle: "Official Facebook community • Updates & media drops",
       url: "https://www.facebook.com/profile.php?id=61595995216646",
       icon: "Facebook",
       highlight: false,
-      category: "সোশ্যাল মিডিয়া",
+      category: "Socials",
     },
     {
       id: "brand-collab",
       title: "💼 Brand Collaboration & PR",
-      subtitle: "ব্র্যান্ড স্পনসরশিপ, ফটোশুট ও প্রমোশনাল ইনকোয়ারির জন্য ইমেইল করুন",
+      subtitle: "Commercial inquiries, sponsorships & editorial bookings",
       url: "mailto:contact.meheniltasnimj@gmail.com?subject=Brand%20Collaboration%20Inquiry",
       icon: "Briefcase",
       badge: "INQUIRY",
       highlight: false,
-      category: "কলাবোরেশন",
+      category: "Collaborations",
     },
     {
       id: "exclusive-feed",
-      title: "✨ Exclusive Photo Drops & Archives",
-      subtitle: "আমার আনরিলিজড ফটো আর্কাইভ ও হাই-রেস লুকবুক",
+      title: "✨ Exclusive Lookbook & Archives",
+      subtitle: "Unreleased high-res photo archives & editorial sets",
       url: "https://x.com/meheniltasnimj",
       icon: "Sparkles",
-      badge: "NEW",
+      badge: "EXCLUSIVE",
       highlight: false,
-      category: "এক্সক্লুসিভ",
+      category: "Exclusive",
     },
   ],
 
-  // ভিজিটররা যাতে ১ ক্লিকে ফোনে কন্টাক্ট সেভ করতে পারে
+  // Save Contact (vCard) disabled per user request
   vcard: {
-    enabled: true,
+    enabled: false,
     fullName: "Mehenil Tasnim Joya",
     email: "contact.meheniltasnimj@gmail.com",
     organization: "Creator / Fashion Influencer",
@@ -122,9 +120,9 @@ export const profileConfig: ProfileConfig = {
     website: "https://x.com/meheniltasnimj",
   },
 
-  // এসইও এবং সোশ্যাল মিডিয়া প্রিভিউ (OpenGraph)
+  // SEO & Social OpenGraph
   seo: {
-    title: "Mehenil Tasnim Joya (@meheniltasnimj) | Official Links",
+    title: "Mehenil Tasnim Joya (@meheniltasnimj) | Official Bio Links",
     description: "Official bio links of Mehenil Tasnim Joya. Connect on Instagram, X (Twitter), Facebook, and explore collaboration inquiries.",
     keywords: [
       "Mehenil Tasnim Joya",
@@ -132,6 +130,7 @@ export const profileConfig: ProfileConfig = {
       "meheniltasnimj07",
       "Fashion Influencer",
       "Lifestyle Muse",
+      "Melbourne",
       "Bio Links",
       "Tasnim Joya",
     ],

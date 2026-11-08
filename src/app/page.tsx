@@ -14,7 +14,7 @@ import { Eye, EyeOff } from "lucide-react";
 
 export default function BioPage() {
   const [currentTheme, setCurrentTheme] = useState<ThemeId>("dark-glass");
-  const [activeCategory, setActiveCategory] = useState<string>("সবগুলো");
+  const [activeCategory, setActiveCategory] = useState<string>("All");
   const [showStats, setShowStats] = useState<boolean>(false);
   const [mounted, setMounted] = useState<boolean>(false);
 
@@ -38,7 +38,7 @@ export default function BioPage() {
 
   // Filter links based on category
   const filteredLinks = profileConfig.links.filter((link) => {
-    if (activeCategory === "সবগুলো") return true;
+    if (activeCategory === "All") return true;
     return link.category === activeCategory;
   });
 
@@ -53,7 +53,7 @@ export default function BioPage() {
           <button
             onClick={() => setShowStats(!showStats)}
             className={`p-2.5 rounded-full border transition-all duration-200 hover:scale-105 active:scale-95 ${activeThemeConfig.cardClass}`}
-            title={showStats ? "অ্যানালিটিক্স লুকান" : "ক্লিক কাউন্টার দেখুন"}
+            title={showStats ? "Hide click analytics" : "View link clicks"}
           >
             {showStats ? (
               <EyeOff className="w-4 h-4 text-blue-400" />
@@ -110,7 +110,7 @@ export default function BioPage() {
 
           {filteredLinks.length === 0 && (
             <div className="text-center py-8 text-zinc-500 text-sm">
-              এই ক্যাটাগরিতে এখনো কোনো লিংক যুক্ত করা হয়নি।
+              No links found in this category.
             </div>
           )}
         </section>
@@ -120,7 +120,7 @@ export default function BioPage() {
       <footer className="w-full max-w-xl mx-auto px-4 py-8 text-center text-xs text-zinc-500">
         <p>{profileConfig.footerText}</p>
         <p className="mt-1 text-[11px] text-zinc-600">
-          Powered by Next.js & Tailwind CSS • 100% Free & Open Source
+          Powered by Next.js & Tailwind CSS • 100% Free & Self-Hosted
         </p>
       </footer>
     </main>
